@@ -12,15 +12,19 @@ Comment.init(
       autoIncrement: true,
     },
     comment_content: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        references: {
-            model: 'post',
-            key: 'post_id',
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    postComment_id: {
+      type: DataTypes.INTEGER,
+      allowNullL false,
+      references: {
+        model: 'post',
+        key: 'post_id',
       } 
     },
     comment_author: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,   
       references: {
         model: 'user',

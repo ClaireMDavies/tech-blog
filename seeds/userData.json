@@ -1,0 +1,26 @@
+[
+    {
+        "first_name": "Claire",
+        "last_name": "Davies",
+        "email": "claire@email.com",
+        "password": "AbCd1234"
+    },
+    {
+        "first_name": "Stuart",
+        "last_name": "Davies",
+        "email": "stuart@email.com",
+        "password": "AbCd1234"
+    },
+    {
+        "first_name": "Harriet",
+        "last_name": "Jefferson",
+        "email": "hattyj@email.co.uk",
+        "password": "AbCd1234"
+    },
+    {
+        "first_name": "Persephone",
+        "last_name": "Smith",
+        "email": "toast@email.com",
+        "password": "AbCd1234"
+    }
+]

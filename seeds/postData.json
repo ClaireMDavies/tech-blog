@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Why women need to code",
+        "post_content": "Diversity in the coding world is necessary to create robust code for the 21st century",
+        "author": 4
+    },
+    {
+        "title": "Tech and me",
+        "post_content": "Tech has firmly established itself in everyones lives over the course of the last year",
+        "author": 3
+    },
+    {
+        "title": "Bootcamps - meeting a need",
+        "post_content": "The tech world is growing exponentially, people have had time over the last year to reevaluate the career paths they are on, whether that be through having more time on their hands due to lockdown, or because of redundancy through the collapse of many traditional sectors.",
+        "author": 3
+    },
+    {
+        "title": "21st Century challenges being met through tech",
+        "post_content": "Arguably the largest challenge we are all facing is that of the climate crisis.  Decarbonising the economy is vital, and has to happen fast, and this is where tech can step in.  creating energy efficient businesses and buildings, through to monitoring the energy grid, the EV charging network and so much more",
+        "author": 2
+    }
+]
