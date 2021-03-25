@@ -1,32 +1,32 @@
 [
     {
         "comment_content": "couldn't agree more",
-        "postComment_id": 2,
-        "comment_author": 1
+        "post_id": 2,
+        "user_id": 1
     },
     {
         "comment_content": "an issue not exclusive to tech",
-        "postComment_id": 1,
-        "comment_author": 2
+        "post_id": 1,
+        "user_id": 2
     },
     {
         "comment_content": "a post-covid world with a highly skilled workforce, the future looks bright",
-        "postComment_id": 3,
-        "comment_author": 1
+        "post_id": 3,
+        "user_id": 1
     },
     {
         "comment_content": "green tech all the way",
-        "postComment_id": 4,
-        "comment_author": 3
+        "post_id": 4,
+        "user_id": 3
     },
     {
         "comment_content": "100%",
-        "postComment_id": 1,
-        "comment_author": 4
+        "post_id": 1,
+        "user_id": 4
     },
     {
         "comment_content": "it's been a strange year!",
-        "postComment_id": 2,
-        "comment_author": 2
+        "post_id": 2,
+        "user_id": 2
     }
 ]
