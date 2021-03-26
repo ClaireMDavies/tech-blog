@@ -26,5 +26,9 @@ router.get('/', async (req,res) => {
     res.status(500).json(err);
   }
 });
+
+//route for showing logging in page
+
+
    
 module.exports = router;
