@@ -5,6 +5,7 @@
 <div>
     <h2>{{post.title}}</h2>
     <p>{{post.post_content}}</p>
-    {{user.first_name}}
+    <p>posted by {{user.first_name}} {{user.last_name}}</p>
+    {{format_date post.date_created}}
 </div>
 {{/each}} 
