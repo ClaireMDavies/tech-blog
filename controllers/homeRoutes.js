@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
 //const withAuth = require('../utils/auth');
 
+//route for showing all posts on homepage
 router.get('/', async (req,res) => {
     try {
         const postData = await Post.findAll({
@@ -29,6 +30,8 @@ router.get('/', async (req,res) => {
 
 //route for showing logging in page
 
+
+//route for showing selected post
 
    
 module.exports = router;
