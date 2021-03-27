@@ -1,0 +1,15 @@
+<h2>My Dashboard</h2>
+
+{{#each user.post as |post| }}
+<div>
+    <h2>{{post.title}}</h2>
+    <p>{{post.post_content}}</p>
+    {{format_date post.date_created}}
+</div>
+{{/each}}
+
+<div>
+    <button class="btn btn-primary" type="new-post-button">create new post</button>
+</div>
+
+<script src="./scripts/dashboard.js"></script>

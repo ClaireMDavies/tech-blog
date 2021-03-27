@@ -20,13 +20,13 @@ router.post('/', async (req, res) => {
     }
   });
      
-  module.exports = router;
+  
 
   //login
   router.post('/login', async (req, res) => {
 
     try {
-        const existingUser = await User.findOne({ where: { email_address: req.body.emailAddress } });
+        const existingUser = await User.findOne({ where: { email: req.body.emailAddress } });
 
         if (!existingUser) {
             res.status(400).json({ message: 'Incorrect email or password, please try again' });
@@ -57,3 +57,5 @@ router.post('/', async (req, res) => {
 
 
   //logout
+
+  module.exports = router;
