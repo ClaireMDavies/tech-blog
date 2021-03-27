@@ -10,11 +10,11 @@
 </head>
 <body>
  <div>
-     <a href="/">Home</a> | <a href= "/dashboard">Dashboard</a> | {{#if logged_in}}<a href="/logout">Logout</a>{{else}}<a href="/login">Login</a>{{/if}} 
+     <a href="/">Home</a> | <a href= "/dashboard">Dashboard</a> | {{#if logged_in}}<a id="logout-button" href="javascript:{}">Logout</a>{{else}}<a href="/login">Login</a>{{/if}} 
  </div>
 
 
     {{{body}}}
-    
+ <script src="./scripts/logout.js"></script>   
 </body>
 </html>
