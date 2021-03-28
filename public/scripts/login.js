@@ -1,12 +1,12 @@
 const loginClickHandler = async () => {
 
-    const emailAddress = $('#login-email-address').val().trim();
+    const email = $('#login-email-address').val().trim();
     const password = $('#login-password').val().trim();
 
-    if (emailAddress && password) {
+    if (email && password) {
         const response = await fetch('/api/users/login', {
             method: 'POST',
-            body: JSON.stringify({ emailAddress, password }),
+            body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -20,15 +20,15 @@ const loginClickHandler = async () => {
 
 const signUpClickHandler = async () => {
 
-    const firstName = $('#signup-first-name').val().trim();
-    const lastName = $('#signup-last-name').val().trim();
-    const emailAddress = $('#signup-email-address').val().trim();
+    const first_name = $('#signup-first-name').val().trim();
+    const last_name = $('#signup-last-name').val().trim();
+    const email = $('#signup-email-address').val().trim();
     const password = $('#signup-password').val().trim();
 
-    if (firstName && lastName && emailAddress && password) {
+    if (first_name && last_name && email && password) {
         const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ firstName, lastName, emailAddress, password }),
+            body: JSON.stringify({ first_name, last_name, email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 

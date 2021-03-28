@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         req.session.logged_in = true;
       
   
-      res.status(200).json(userData);
+      res.status(200).end();
       });
     } catch (err) {
       res.status(400).json(err);
