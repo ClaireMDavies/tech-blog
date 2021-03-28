@@ -69,5 +69,13 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
-
+//route for showing create new post
+router.get('/createpost', async (req, res) => {
+    try {
+        res.render('createpost');
+    }
+    catch (err) {
+        res.status(500).json(err);
+    }
+});
 module.exports = router;
