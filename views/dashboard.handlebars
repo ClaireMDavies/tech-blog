@@ -1,14 +1,20 @@
-<h2>My Dashboard</h2>
-
-
-{{#each user.posts as |post| }}
-<div>
-    <a href="/editpost/{{post.id}}">{{post.title}}</a>
-    <p>{{post.post_content}}</p>
-    {{format_date post.date_created}}
+<div class="page-heading">
+    <h2>My Dashboard</h2>
 </div>
-{{/each}}
 
-<div>
-    <a href="/createpost" type="new-post-button"> Create New Post</a>
+<div class="container" id="post-container">
+    {{#each user.posts as |post| }}
+    <div class="container">
+        <div id="post-title"><a href="/editpost/{{post.id}}">{{post.title}}</a></div>
+        <div id="post-content">
+            <p>{{post.post_content}}</p>
+        </div>
+        {{format_date post.date_created}}
+    </div>
+
+    {{/each}}
+
+    <div>
+        <a href="/createpost" class="btn btn-primary" type="new-post-button"> Create New Post</a>
+    </div>
 </div>

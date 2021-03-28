@@ -1,24 +1,27 @@
-<h1>{{post.title}}</h1>
+<div class="page-heading">
+    <h2>{{post.title}}</h2>
+</div>
 <span>{{format_date post.date_created}}</span>
 <span> by {{post.user.first_name}} {{post.user.last_name}}</span>
 
-<div>{{post.post_content}}</div>
+<div id="post-content">{{post.post_content}}</div>
 
-<h2>Comments</h2>
-{{#each post.comments as |comment| }}
-<div>
-    <ul>
-        <li>
-        {{comment.comment_content}}
-        <br>
-        {{comment.user.first_name}} {{comment.user.last_name}} @ {{format_date comment.date_created}}
-        </li>
-    </ul>
+
+<div class="page-heading"><h3>Comments</h3></div>
+<div class=" comment-container page-heading">
+    {{#each post.comments as |comment| }}
+    <div>
+
+
+        <div id="post-content">{{comment.comment_content}}</div>
+        by {{comment.user.first_name}} {{comment.user.last_name}} @ {{format_date comment.date_created}}
+    </div>
+    {{/each}}
 </div>
-{{/each}}
-
 {{#if logged_in}}
-    <input id="new-comment" type="text"><input id="add-comment-button" type="button" data-id="{{post.id}}" value="Add Comment">
+<input id="new-comment" type="text" class="form-control" >
+<input id="add-comment-button" class="btn btn-primary" type="button" data-id="{{post.id}}"
+    value="Add Comment">
 {{/if}}
 
 <script src="/scripts/viewpost.js"></script>

@@ -1,12 +1,12 @@
-<h1>Welcome to my Blog of Tech</h1>
+<div class="page-heading"><h2>Welcome to my Blog of Tech</h2></div>
 
 <!-- Loop over each object in the posts array -->
 <div class="container" id="post-container">
 {{#each posts as |post| }}
 <div class="container">
     <div id="post-title"><h2><a href="/viewpost/{{post.id}}">{{post.title}}</a></h2></div>
-    <p>{{post.post_content}}</p>
-    <p>posted by {{user.first_name}} {{user.last_name}}</p>
-    {{format_date post.date_created}}
+    <div id="post-content"><p>{{post.post_content}}</p></div>
+    <p>posted by {{user.first_name}} {{user.last_name}} {{format_date post.date_created}}</p>
+    
 </div>
 {{/each}} 

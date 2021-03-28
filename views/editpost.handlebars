@@ -1,8 +1,10 @@
-<h1>Edit post</h1>
+<div class="page-heading">
+    <h2>Edit Post</h2>
+</div>
 
-<input id="post-title" type="text" value="{{post.title}}">
-<input id="post-content" type="text" value="{{post.post_content}}">
-<input id="update-post-button" type="button" value="Update" data-id="{{post.id}}">
-<input id="delete-post-button" type="button" value="Delete" data-id="{{post.id}}">
+<input id="post-title" type="text" class="form-control" value="{{post.title}}">
+<input id="post-content" type="text" class="form-control" value="{{post.post_content}}">
+<button class="btn btn-primary" type="submit"id="update-post-button"  data-id="{{post.id}}">Update</button>
+<button class="btn btn-danger" type="submit" id="delete-post-button" data-id="{{post.id}}">Delete</button>
 
 <script src="/scripts/editpost.js"></script>

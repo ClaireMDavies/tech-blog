@@ -1,19 +1,52 @@
 .navbar {
-    padding: 10px;
-
+  padding: 10px;
 }
 .container {
-    background-color: cadetblue;
-    color: white;
+  background-color: cadetblue;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
 
 #post-container {
-    padding-bottom: 10px;
-
+  padding-bottom: 10px;
+  color: cadetblue;
 }
 
 #post-title {
-    background-color: white;
-    border-style: double;
-    border-color: blue;
+  color: cadetblue;
+  background-color: #e3f2fd;
+  padding: 10px;
+}
+
+#post-content {
+  color: cadetblue;
+  background-color: #e3f2fd;
+  padding: 30px;
+}
+
+.page-heading {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn {
+  margin: 5px;
+}
+
+.comment-container {
+  text-align: center;
+  margin: 20px;
+  padding-bottom: 10px;
+}
+
+#signup-password {
+    color: grey;
+    text-align: center;
+}
+
+.logo {
+   font-weight: bold;
+   font-family: monospace;
+   
 }

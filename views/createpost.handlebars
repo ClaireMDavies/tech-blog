@@ -1,12 +1,17 @@
-<div>
-    <label for="new-post-title">Title</label>
-    <input type="text" id="new-post-title" />
+<div class="page-heading">
+    <h2>Create New Post</h2>
 </div>
-<div>
-    <label for="new-post-content">Blog post</label>
-    <input type="text" id="new-post-content" />
+<div class="container" id="post-container">
+    <div id="post-title">
+        <label for="new-post-title">Title</label>
+        <input type="text" class="form-control" id="new-post-title" />
+    </div>
+    <div id="post-content">
+        <label for="new-post-content">Blog post</label>
+        <input type="text" class="form-control" id="new-post-content" />
+    </div>
+    <div><button class="btn btn-primary" type="submit" id="create-post-submit">submit</button></div>
 </div>
-<div><button class="btn btn-primary" type="submit" id="create-post-submit">submit</button></div>
 </div>
 
 <script src="/scripts/createpost.js"></script>
