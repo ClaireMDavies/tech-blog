@@ -22,13 +22,13 @@ router.post('/', withAuth, async (req, res) => {
 router.put('/:id', async (req, res) => {
 
     try {
-        const updatedPost = await Post.update({ 
-            title: req.body.title, 
-            post_content: req.body.post_content 
-        }, 
-        { 
-            where: { id: req.params.id } 
-        });
+        const updatedPost = await Post.update({
+            title: req.body.title,
+            post_content: req.body.post_content
+        },
+            {
+                where: { id: req.params.id }
+            });
 
         res.status(200).json(updatedPost);
     }

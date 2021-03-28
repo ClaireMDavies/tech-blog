@@ -5,31 +5,28 @@ const bcrypt = require('bcrypt');
 //create a new user
 router.post('/', async (req, res) => {
     try {
-      const userData = await User.create(req.body);
+        const userData = await User.create(req.body);
 
-  
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
-      
-  
-      res.status(200).end();
-      });
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+
+            res.status(200).end();
+        });
     } catch (err) {
-      res.status(400).json(err);
+        res.status(400).json(err);
     }
-  });
-     
-  
+});
 
-  //login
-  router.post('/login', async (req, res) => {
+//login
+router.post('/login', async (req, res) => {
 
     try {
         const existingUser = await User.findOne({ where: { email: req.body.email } });
 
         if (!existingUser) {
-            res.status(400).json({ message: 'Incorrect email or password, please try again' });
+            res.statusMessage = 'Incorrect email or password, please try again';
+            res.status(400).end();
         }
         else {
             // found a user, now check the password...
@@ -41,12 +38,12 @@ router.post('/', async (req, res) => {
                     req.session.logged_in = true;
 
                     res.json(200).end();
-                    //{ user: existingUser, message: 'You are now logged in!' });
                 });
             }
             else {
                 // invalid password
-                res.status(400).json({ message: 'Incorrect email or password, please try again' });
+                res.statusMessage = 'Incorrect email or password, please try again';
+                res.status(400).end();
             }
         }
     }
@@ -55,19 +52,16 @@ router.post('/', async (req, res) => {
     }
 });
 
-
-  //logout
-  router.post('/logout', async (req, res) => {
+//logout
+router.post('/logout', async (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(200).end();
-            
+
         });
     } else {
         res.status(404).end();
     }
 });
 
-
-
-  module.exports = router;
+module.exports = router;
