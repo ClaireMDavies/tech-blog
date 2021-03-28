@@ -1,0 +1,19 @@
+.navbar {
+    padding: 10px;
+
+}
+.container {
+    background-color: cadetblue;
+    color: white;
+}
+
+#post-container {
+    padding-bottom: 10px;
+
+}
+
+#post-title {
+    background-color: white;
+    border-style: double;
+    border-color: blue;
+}

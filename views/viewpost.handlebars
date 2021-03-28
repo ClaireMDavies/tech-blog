@@ -1,0 +1,24 @@
+<h1>{{post.title}}</h1>
+<span>{{format_date post.date_created}}</span>
+<span> by {{post.user.first_name}} {{post.user.last_name}}</span>
+
+<div>{{post.post_content}}</div>
+
+<h2>Comments</h2>
+{{#each post.comments as |comment| }}
+<div>
+    <ul>
+        <li>
+        {{comment.comment_content}}
+        <br>
+        {{comment.user.first_name}} {{comment.user.last_name}} @ {{format_date comment.date_created}}
+        </li>
+    </ul>
+</div>
+{{/each}}
+
+{{#if logged_in}}
+    <input id="new-comment" type="text"><input id="add-comment-button" type="button" data-id="{{post.id}}" value="Add Comment">
+{{/if}}
+
+<script src="/scripts/viewpost.js"></script>
