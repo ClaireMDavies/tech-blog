@@ -1,11 +1,12 @@
 const createPost = async () => {
 
     const title = $('#new-post-title').val().trim();
-    const content = $('#new-post-content').val().trim();
+    const post_content = $('#new-post-content').val().trim();
 
     const response = await fetch('/api/posts', {
         
       method: 'POST',
+      body: JSON.stringify({ title, post_content }),
       headers: { 'Content-Type': 'application/json' },
     });
   
@@ -16,4 +17,4 @@ const createPost = async () => {
     }
   };
   
-$('#new-post-button').click(createPost);
+$('#create-post-submit').click(createPost);
